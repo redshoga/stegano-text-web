@@ -1,6 +1,8 @@
 # stegano-text-web
 
-## 機能
+Steganographer for text on web browser
+
+## Features
 
 - [x] Next
 - [x] TypeScript
