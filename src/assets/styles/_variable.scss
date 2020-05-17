@@ -1,1 +1,14 @@
 $color-bg: #fafafa;
+$layout-width: 800px;
+
+@mixin mobile() {
+  @media screen and (max-width: $layout-width) {
+    @content;
+  }
+}
+
+@mixin desktop() {
+  @media screen and (min-width: $layout-width + 1px) {
+    @content;
+  }
+}

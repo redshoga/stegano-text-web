@@ -1,0 +1,12 @@
+@import "../assets/styles/_variable";
+
+.container {
+  @include mobile() {
+    width: 100%;
+  }
+
+  @include desktop() {
+    width: $layout-width;
+    margin: 0 auto;
+  }
+}

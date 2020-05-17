@@ -1,3 +1,12 @@
-import React from 'react';
-const page = (): JSX.Element => <div>404</div>;
-export default page;
+import React, { useEffect } from 'react';
+import { useRouter } from 'next/router';
+
+const Page: React.FC = () => {
+  const router = useRouter();
+  useEffect(() => {
+    if (typeof window !== 'undefined') router.replace('/');
+  });
+  return <></>;
+};
+
+export default Page;
