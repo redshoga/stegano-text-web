@@ -1,0 +1,12 @@
+{
+  "Jest Test": {
+    "prefix": "describe",
+    "body": [
+      "describe('$1', () => {",
+      "  test('$2', () => {",
+      "    $3",
+      "  });",
+      "});"
+    ]
+  }
+}

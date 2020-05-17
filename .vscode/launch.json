@@ -1,0 +1,33 @@
+// https://spectrum.chat/next-js/general/debugging-in-vscode~f93e5e29-6cce-4b43-8fed-e5a6d302d04e
+// https://ichiki.netlify.com/blog/20200113_nextjs_debug/
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Next: Node",
+      "runtimeExecutable": "npm",
+      // "cwd": "${workspaceFolder}/src",
+      "runtimeArgs": ["run", "dev:debugger"],
+      "port": 9229,
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Next: Chrome",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}",
+      "sourceMapPathOverrides": {
+        "webpack:///./*": "${webRoot}/src/*"
+      }
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Next: Full",
+      "configurations": ["Next: Node", "Next: Chrome"]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "React FC": {
+    "prefix": "fc",
+    "body": [
+      "import * as React from 'react';",
+      "import styles from './$1.scss';",
+      "",
+      "export type Props = {",
+      "  $2;",
+      "};",
+      "",
+      "export enum TestAttr {",
+      "  $3,",
+      "}",
+      "",
+      "export const $1: React.FC<Props> = (props: Props) => $4;"
+    ]
+  },
+  "Storybook": {
+    "prefix": "story",
+    "body": [
+      "import * as React from 'react';",
+      "import { $1, Props } from './$1';",
+      "",
+      "import { action } from '@storybook/addon-actions';",
+      "import { text, number, boolean } from '@storybook/addon-knobs';",
+      "",
+      "export default {",
+      "  title: '$1',",
+      "  component: $1,",
+      "};",
+      "",
+      "export const Default = (): JSX.Element => {",
+      "  const mockProps: Props = {",
+      "    $2",
+      "  };",
+      "",
+      "  return <$1 {...mockProps} />;",
+      "};"
+    ]
+  }
+}
